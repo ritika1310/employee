@@ -1,0 +1,31 @@
+﻿<html>
+
+<head>
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <link href="src/styles/empListStyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="/Scripts/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="/Scripts/angular.min.js"></script>
+    <script type="text/javascript" src="/Scripts/angular-route.min.js"></script>
+    <!--<script type="text/javascript"src="Scripts/angular-animate.min.js"></script>
+    <script type="text/javascript" src="Scripts/angular-touch.min.js"></script>-->
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+
+    <script type="text/javascript" src="/app.js"></script>
+    <script type="text/javascript" src="/router.js"></script>
+    <script type="text/javascript" src="/src/controllers/empCtrl.js"></script>
+    <script type="text/javascript" src="/src/controllers/empUpdateCtrl.js"></script>
+    <script type="text/javascript" src="/src/services/empService.js"></script>
+</head>
+
+<body>
+    <!-- Informing angular about where to render the app -->
+    <div ng-app="EMP_MODULE">
+        <div ng-view></div>
+    </div>
+</body>
+
+</html>

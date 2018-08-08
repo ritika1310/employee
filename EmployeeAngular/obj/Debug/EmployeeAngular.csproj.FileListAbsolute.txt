@@ -1,0 +1,9 @@
+C:\Users\Ritika\source\repos\EmployeeAngular\EmployeeAngular\bin\EmployeeAngular.dll.config
+C:\Users\Ritika\source\repos\EmployeeAngular\EmployeeAngular\bin\EmployeeAngular.dll
+C:\Users\Ritika\source\repos\EmployeeAngular\EmployeeAngular\bin\EmployeeAngular.pdb
+C:\Users\Ritika\source\repos\EmployeeAngular\EmployeeAngular\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Ritika\source\repos\EmployeeAngular\EmployeeAngular\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Ritika\source\repos\EmployeeAngular\EmployeeAngular\obj\Debug\EmployeeAngular.csprojResolveAssemblyReference.cache
+C:\Users\Ritika\source\repos\EmployeeAngular\EmployeeAngular\obj\Debug\EmployeeAngular.csproj.CoreCompileInputs.cache
+C:\Users\Ritika\source\repos\EmployeeAngular\EmployeeAngular\obj\Debug\EmployeeAngular.dll
+C:\Users\Ritika\source\repos\EmployeeAngular\EmployeeAngular\obj\Debug\EmployeeAngular.pdb

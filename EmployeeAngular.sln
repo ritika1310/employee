@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeAngular", "EmployeeAngular\EmployeeAngular.csproj", "{A0F73E93-0918-4417-B6DA-DC38BA490A51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0F73E93-0918-4417-B6DA-DC38BA490A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0F73E93-0918-4417-B6DA-DC38BA490A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0F73E93-0918-4417-B6DA-DC38BA490A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F73E93-0918-4417-B6DA-DC38BA490A51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27FFB718-BCFE-406A-A97A-8E2ED19A8894}
+	EndGlobalSection
+EndGlobal

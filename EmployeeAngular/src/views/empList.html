@@ -1,0 +1,117 @@
+﻿
+<div class="container">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2>Employee  <b>List</b></h2>
+                </div>
+                <div class="col-sm-8">
+                    <a href="/CreateEmp" class="btn btn-primary"><i class="material-icons">add_circle_outline</i> <span>Add Employee</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="table-filter">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="show-entries">
+                        <span>Show</span>
+                        <select class="form-control" ng-model="filters.pagination.numPerPage">
+                            <option ng-value="1">1</option>
+                            <option ng-value="5">5</option>
+                            <option ng-value="10">10</option>
+                            <option ng-value="15">15</option>
+                            <option ng-value="20">20</option>
+                        </select>
+                        <span>entries</span>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                    <div class="filter-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" ng-model="filters.Name">
+                    </div>
+                    <div class="filter-group">
+                        <label>Department</label>
+                        <select class="form-control" ng-model="filters.Department">
+                            <option value="">All</option>
+                            <option>IT</option>
+                            <option>Software</option>
+                            <option>Support</option>
+                            <option>Accounts</option>
+                            <option>Icres</option>
+                        </select>
+                    </div>
+
+                    <span class="filter-icon"><i class="fa fa-filter"></i></span>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Emp Id</th>
+                    <th ng-click="order('Name')">Emp Name</th>
+                    <th ng-click="order('Salary')">Emp Salary</th>
+                    <th ng-click="order('Department')">Emp Department</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="(index,emp) in empObj | orderBy:predicate:reverse | filter :filters.Department | filter:filters.Name | filter: paginate">
+                    <td>{{emp.Id}}</td>
+                    <td>{{emp.Name}}</td>
+                    <td>{{emp.Salary}}</td>
+                    <td>{{emp.Department}}</td>
+                    <td><a  href="/UpdateEmp/{{emp.Id}}" uib-tooltip="Update" tooltip-placement="top" class="view" title="Update" ><i class="material-icons">edit</i></a></td>
+                    <td><a href="#" class="view" ng-click="selectedEmpIndex(emp.Id)" title="Delete"  data-toggle="modal" data-target="#exampleModal"><i class="material-icons">delete_forever</i></a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="clearfix">
+            <!--<div class="hint-text">Showing <b>{{filters.pagination.numPerPage}}</b> out of <b>{{empObj.length}}</b> entries</div>-->
+            <uib-pagination total-items="empObj.length" ng-model="filters.pagination.currentPage"
+                            max-size="5" boundary-links="true"
+                            items-per-page="filters.pagination.numPerPage" class="pagination-sm">
+            </uib-pagination>
+            <ul uib-pagination total-items="empObj.length" ng-model="filters.pagination.currentPage" max-size="5" boundary-links="true"
+                items-per-page="filters.pagination.numPerPage" class="pagination"></ul>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Employee Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Do you want to delete this record?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" ng-click="deleteEmp(index)">Delete</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

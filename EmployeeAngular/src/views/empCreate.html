@@ -1,0 +1,61 @@
+﻿<div class="container">
+    <div class="table-wrapper">
+        <div class="table-title">
+
+            <h4 class="display-8">Add Employee</h4>
+        </div>
+        <form name="myForm">
+
+            <uib-tabset active="active">
+                <uib-tab index="0" heading="Personal Info">
+                    <br />
+                    <div class="form-group row">
+                        <label for="inputfname" class="col-sm-2 col-form-label">Name</label>
+                        <div>
+                            <input class="form-control" type="text" ng-model="newUser.Name" name="inputfname" ng-pattern="/^[a-z,A-Z]{1,25}$/" placeholder="Your Name.." required />
+                            <!--<i ng-if="myForm.inputfname.$invalid" class="error-message">First name is required</i>-->
+                            <span ng-show=" myForm.inputfname.$touched && myForm.inputfname.$error.required" class="error-message">First Name is required.</span>
+                            <span ng-show="myForm.inputfname.$error.pattern" class="error-message">Please enter only string for name!</span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputSalary" class="col-sm-2 col-form-label">Salary</label>
+                        <div>
+                            <input type="text" class="form-control" ng-model="newUser.Salary" ng-pattern="/^[0-9]{1,7}$/" name="salary" placeholder="Your Salary.." />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" for="selectDepartment">Department</label>
+                        <div>
+                            <select class="custom-select  form-control" ng-model="newUser.Department" name="department">
+                                <option value="IT">IT</option>
+                                <option value="Icres">Icres</option>
+                                <option value="Account">Account</option>
+                                <option value="Support">Support</option>
+                                <option value="Network">Network</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    
+                </uib-tab>
+                <uib-tab index="2" heading="2nd" disable="tab.disabled">
+                    2nd tab
+                </uib-tab>
+                <uib-tab index="3"  heading="3rd">
+                    <div class="form-group row">
+                        <div>
+                            <button class="btn btn-primary" ng-click="createNewUser()">Add Employee</button>
+                            <a href="/">  <button class="btn btn-secondary">Back</button></a>
+                        </div>
+                    </div>
+                </uib-tab>
+            </uib-tabset>
+        </form>
+
+
+        </div>
+    </div>
+
+
+
